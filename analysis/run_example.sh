@@ -1,16 +1,16 @@
 # Uncomment and edit the following lines to create symbolic links so you can choose
 # where to keep your data
-# ln -s <dataset-folder-full-path> spear_data  
-# ln -s <outputs-folder-full-path> my_results  
+# ln -sfr <dataset-folder-full-path> spear_data  # Output path for the processed audio, metrics csv and plots
+# ln -sfr <outputs-folder-full-path> my_results  # Root folder of the SPEAR datasets containing the folders Main and Extra
 
 
 # Define variables
-SET='Dev'
-DATASET=2
-SESSION='10'
-MINUTE='00'
-PROCESSING='baseline'
-REFERENCE='passthrough'
+SET='Dev'               # 'Train', 'Dev' or 'Eval'.
+DATASET=2               # 1 to 4.
+SESSION='10'            # 1 to 9 for Train, 10 to 12 for Dev, 13 to 15 for Eval. Select '' for all session of current Dev.
+MINUTE='00'             # 00 to 30 (depends on the current session). '' for all minutes of current session.
+PROCESSING='baseline'   # Name of desired processing. 'baseline' by default
+REFERENCE='passthrough' # Name of desired reference enhancement. 'passthrough' by default.
 
 
 # Output paths
